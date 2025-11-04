@@ -263,3 +263,7 @@ post-provision
 
 # Local secrets for act
 .secrets
+#
+output/
+#
+.idea
