@@ -40,8 +40,9 @@ except Exception as e:
 
 # Core components
 from .computer import Computer
+from .vnc_computer import VncComputer
 
 # Provider components
 from .providers.base import VMProviderType
 
-__all__ = ["Computer", "VMProviderType"]
+__all__ = ["Computer", "VncComputer", "VMProviderType"]

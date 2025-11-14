@@ -260,9 +260,15 @@ class Computer:
         try:
             # If using host computer server
             if self.use_host_computer_server:
-                self.logger.info("Using host computer server")
                 # Set ip_address for host computer server mode
-                ip_address = "localhost"
+                # Use self.host only if it has a value (not default "localhost")
+                # Otherwise fall back to "localhost"
+                ip_address = (
+                    self.host
+                    if (self.host and self.host.strip() and self.host != "localhost")
+                    else "localhost"
+                )
+                self.logger.info(f"Using host computer server at {ip_address}")
                 # Create the interface with explicit type annotation
                 from .interface.base import BaseComputerInterface
 

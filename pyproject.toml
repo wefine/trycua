@@ -3,6 +3,8 @@ authors = [{ name = "TryCua", email = "gh@trycua.com" }]
 dependencies = [
     "openai<1.100.0",
     "anthropic>=0.67.0",
+    "mlflow[genai]>=3.5.1",
+    "litellm[mlflow]>=1.78.5",
 ]
 description = "CUA (Computer Use Agent) mono-repo"
 license = { text = "MIT" }
